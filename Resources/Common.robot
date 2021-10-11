@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${list} =    Create List  --start-maximized  --headless    --no-sandbox
+${list} =    Create List  --start-maximized  --headless    --no-sandbox       --done
 ${args} =     Create Dictionary    args=${list}
 ${desired caps} =     Create Dictionary    chromeOptions=${args}
 
