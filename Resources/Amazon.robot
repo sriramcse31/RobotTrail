@@ -5,7 +5,7 @@ Library  SeleniumLibrary
 Launch Application under Test
     Go To  http://amazon.com.au
 Search for an item to purchase
-    Wait Until Page Contains    Select your address
+    Wait Until Page Contains    Best Sellers
     Input Text  twotabsearchtextbox  OMOTON
     Click Button    nav-search-submit-button
     Wait Until Page Contains    results for "OMOTON"
