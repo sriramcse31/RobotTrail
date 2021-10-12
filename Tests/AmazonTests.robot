@@ -10,7 +10,7 @@ User must sign in to continue
     Common.Open the browser
     Amazon.Launch Application under Test
     Amazon.Search for an item to purchase
-    Amazon.Add Item to Shopping cart
-    Amazon.Proceed to checkout
-    Amazon.User should be prompted to login to the portal
+    #Amazon.Add Item to Shopping cart
+    #Amazon.Proceed to checkout
+    #Amazon.User should be prompted to login to the portal
     Common.Close the browser
