@@ -9,8 +9,8 @@ Search for an item to purchase
     Input Text  twotabsearchtextbox  OMOTON
     Click Button    nav-search-submit-button
     Wait Until Page Contains    results for "OMOTON"
-    Click Element    xpath=//*[contains(text(),'OMOTON Ultra-Slim Bluetooth Wireless Keyboard, White')]
-    Wait Until Page Contains    Back to results
+    #Click Element    xpath=//*[contains(text(),'OMOTON Ultra-Slim Bluetooth Wireless Keyboard, White')]
+    #Wait Until Page Contains    Back to results
 Add Item to Shopping cart
     Click Button    add-to-cart-button
 Proceed to checkout
