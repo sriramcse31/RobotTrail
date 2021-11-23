@@ -68,7 +68,7 @@ phases:
       #- google-chrome --version
       #- chromedriver --version
       
-      - firefox -P
+      #- firefox -P
       
       
       # - google-chrome-stable --no-sandbox --headless --disable-gpu --dump-dom https://www.google.com/
