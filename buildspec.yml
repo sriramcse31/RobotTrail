@@ -41,7 +41,7 @@ phases:
       - ls
       - cd firefox
       - ls
-      - firefox
+      - firefox -P
       - cd..
       - rm firefox-*.tar.bz2
       #- yum -y install google-chrome-stable_current_x86_64.rpm
