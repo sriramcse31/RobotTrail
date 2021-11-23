@@ -39,7 +39,10 @@ phases:
       - wget https://ftp.mozilla.org/pub/firefox/releases/88.0/linux-x86_64/en-US/firefox-88.0.tar.bz2
       - tar xjf firefox-*.tar.bz2
       - ls
-      - ./firefox
+      - cd firefox
+      - ls
+      - firefox
+      - cd..
       - rm firefox-*.tar.bz2
       #- yum -y install google-chrome-stable_current_x86_64.rpm
       
