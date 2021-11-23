@@ -1,0 +1,110 @@
+version: 0.2
+
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+  #secrets-manager:
+     # key: secret-id:json-key:version-stage:version-id
+     # key: secret-id:json-key:version-stage:version-id
+  #exported-variables:
+     # - variable
+     # - variable
+  #git-credential-helper: yes
+#batch:
+  #fast-fail: true
+  #build-list:
+  #build-matrix:
+  #build-graph:
+phases:
+  install:
+    #If you use the Ubuntu standard image 2.0 or later, you must specify runtime-versions.
+    #If you specify runtime-versions and use an image other than Ubuntu standard image 2.0, the build fails.
+    runtime-versions:
+      python: 3.9
+      # name: version
+    commands:
+      - echo sripada
+      - pip install --upgrade pip
+      - pip install -r requirements.txt
+      #- pip install robotframework
+      #- pip install robotframework-SeleniumLibrary
+      # - curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key adv --recv-key
+      # - echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources/list.d/google-chrome.list
+      # - apt-get -y update
+      # - yum -y install google-chrome-stable
+      - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+      - yum -y install google-chrome-stable_current_x86_64.rpm
+      
+      - wget https://chromedriver.storage.googleapis.com/96.0.4664.45/chromedriver_linux64.zip
+      - unzip chromedriver_linux64.zip
+      - mv chromedriver /usr/bin/chromedriver
+      - chown root:root /usr/bin/chromedriver
+      - chmod +x /usr/bin/chromedriver
+      - wget https://selenium-release.storage.googleapis.com/3.13/selenium-server-standalone-3.13.0.jar
+
+      #- robot --version
+      - pwd
+      - ls
+      - google-chrome --version
+      - chromedriver --version
+      
+      # - google-chrome-stable --no-sandbox --headless --disable-gpu --dump-dom https://www.google.com/
+      # - command
+      # - command
+  pre_build:
+    commands:
+      - echo Prebuild stage
+      # - command
+      # - command
+  build:
+    commands:
+      - ls
+      - echo Nothing to build
+      - robot application_modernization/tests/complaints
+      #- robot Tests/AmazonTests.robot
+      #- aws s3 cp *	s3://sripadatest/
+      #- robot --version
+      #- ls
+      #- cd tests
+      #- ls
+      # - command
+      # - command
+  post_build:
+    commands:
+      - echo entered postbuild
+      - ls
+      - aws s3 cp output.xml	s3://sripadatestresults/
+      - aws s3 cp log.html	s3://sripadatestresults/
+      - aws s3 cp report.html	s3://sripadatestresults/
+      - aws s3 cp selenium-screenshot-1.png s3://sripadatestresults/
+      - python -V
+      - pip -V
+      # - pip list
+      #- robot --version
+      # - command
+      # - command
+#reports:
+  #report-name-or-arn:
+    #files:
+      # - location
+      # - location
+    #base-directory: location
+    #discard-paths: yes
+    #file-format: JunitXml | CucumberJson
+artifacts:
+  files:
+    - log.html
+    - output.xml
+    - report.html
+    # - location
+    # - location
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths
