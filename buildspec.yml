@@ -40,10 +40,10 @@ phases:
       #- tar xjf firefox-*.tar.bz2
       - apt-get install firefox
       - ls
-      #- cd firefox
+      - cd firefox
       #- export DISPLAY=localhost:0.0
-      #- ls
-      - firefox -P
+      - ls
+      #- firefox -P
       - cd..
       - rm firefox-*.tar.bz2
       #- yum -y install google-chrome-stable_current_x86_64.rpm
