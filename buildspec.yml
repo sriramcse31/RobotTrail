@@ -44,7 +44,7 @@ phases:
       #- export DISPLAY=localhost:0.0
       - ls
       #- firefox -P
-      - cd..
+      - cd ..
       - rm firefox-*.tar.bz2
       #- yum -y install google-chrome-stable_current_x86_64.rpm
       
