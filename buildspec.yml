@@ -64,8 +64,8 @@ phases:
     commands:
       - ls
       - echo Nothing to build
-      - robot application_modernization/tests/complaints
-      #- robot Tests/AmazonTests.robot
+      #- robot application_modernization/tests/complaints
+      - robot Tests/AmazonTests.robot
       #- aws s3 cp *	s3://sripadatest/
       #- robot --version
       #- ls
