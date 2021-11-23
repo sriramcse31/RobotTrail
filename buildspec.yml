@@ -36,12 +36,13 @@ phases:
       # - echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources/list.d/google-chrome.list
       # - apt-get -y update
       # - yum -y install google-chrome-stable
-      - wget https://ftp.mozilla.org/pub/firefox/releases/88.0/linux-x86_64/en-US/firefox-88.0.tar.bz2
-      - tar xjf firefox-*.tar.bz2
+      #- wget https://ftp.mozilla.org/pub/firefox/releases/88.0/linux-x86_64/en-US/firefox-88.0.tar.bz2
+      #- tar xjf firefox-*.tar.bz2
+      - sudo apt-get install firefox
       - ls
-      - cd firefox
-      - export DISPLAY=localhost:0.0
-      - ls
+      #- cd firefox
+      #- export DISPLAY=localhost:0.0
+      #- ls
       - firefox -P
       - cd..
       - rm firefox-*.tar.bz2
