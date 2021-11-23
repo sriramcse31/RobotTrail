@@ -1,0 +1,8 @@
+robotframework==4.1.1
+robotframework-faker==5.0.0
+robotframework-pdf2textlibrary==1.0.1
+robotframework-pythonlibcore==3.0.0
+robotframework-rpa==0.1.0
+robotframework-seleniumlibrary==5.1.3
+robotframework-SikuliLibrary==2.0.0
+selenium==3.141.0
