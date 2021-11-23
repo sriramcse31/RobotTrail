@@ -38,7 +38,7 @@ phases:
       # - yum -y install google-chrome-stable
       #- wget https://ftp.mozilla.org/pub/firefox/releases/88.0/linux-x86_64/en-US/firefox-88.0.tar.bz2
       #- tar xjf firefox-*.tar.bz2
-      - sudo apt-get install firefox
+      - apt-get install firefox
       - ls
       #- cd firefox
       #- export DISPLAY=localhost:0.0
